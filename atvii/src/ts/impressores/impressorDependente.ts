@@ -13,9 +13,7 @@ export default class ImpressorDependente implements Impressor {
         this.cliente = cliente
 
     }
-    imprimir(index?: number): string { 
-        console.log(this.cliente);
-        
+    imprimir(index?: number): string {       
         let impressao = `**********************************************************************************\n`
             + `| Nome: ${this.cliente.Nome}\n`
             + `| Nome social: ${this.cliente.NomeSocial}\n`

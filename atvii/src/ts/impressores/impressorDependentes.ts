@@ -16,7 +16,7 @@ export default class ImpressorDependentes implements Impressor {
     imprimir(): string {
         let impressao = ``
         for (let index = 0; index < this.dependentes.length; index++) {
-            impressao = `----------------- Dependente -------------\n`
+            impressao = `----------------- Dependente ${index} -------------\n`
             this.impressor = new ImpressorDependente(this.dependentes[index])
             if (index == 0) {
                 impressao = impressao + `${this.impressor.imprimir()}`

@@ -21,8 +21,11 @@ export default class ListagemTitular extends Processo {
     processar(): void {
         
         for (let index = 0; index < this.clientes.length; index++) {
-            var cliente =this.clientes[index].Dependentes
-            this.clientesDependentes.push(cliente)
+            for (let indexDependente = 0; indexDependente < this.clientes[index].Dependentes.length; indexDependente++) {
+                var cliente = this.clientes[index].Dependentes[indexDependente]
+                this.clientesDependentes.push(cliente) 
+            }
+            
         }
         console.clear()
         console.log('Iniciando a listagem dos clientes dependentes...')
