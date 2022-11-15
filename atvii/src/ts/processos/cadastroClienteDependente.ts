@@ -17,6 +17,7 @@ export default class CadastroClienteDependente extends Processo {
         console.log('Iniciando o cadastro de um novo dependente...')
         this.processo = new ListagemTitulares()
         this.processo.processar()
+        
         let indexTitular = this.entrada.receberTexto('Qual o index do cliente titular?')
         let titular = this.titulares[parseInt(indexTitular)]
         let nome = this.entrada.receberTexto('Qual o nome do dependente?')

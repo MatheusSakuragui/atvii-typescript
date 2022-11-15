@@ -2,7 +2,6 @@ import Impressor from "../interfaces/impressor"
 import Cliente from "../modelos/cliente"
 import ImpressaorCliente from "./impressorCliente"
 import ImpressorDependente from "./impressorDependente"
-
 import ImpressorDocumento from "./impressorDocumento"
 
 export default class ImpressorDependentes implements Impressor {
