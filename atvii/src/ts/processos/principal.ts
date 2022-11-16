@@ -1,5 +1,6 @@
 import Processo from "../abstracoes/processo"
 import MenuPrincipal from "../menus/menuPricipal"
+import GerarScript from "../script/script"
 import ListagemTitulares from "./listagemTitulares"
 import TipoCadastroCliente from "./tipoCadastroCliente"
 import TipoEditarCliente from "./tipoEditarCliente"

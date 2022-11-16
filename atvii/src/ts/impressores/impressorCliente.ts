@@ -13,7 +13,6 @@ export default class ImpressaorCliente implements Impressor {
 
     }
     imprimir(index?: number): string { 
-        console.log(this.cliente)
         let impressao = `**********************************************************************************\n`
             + `| Nome: ${this.cliente.Nome}\n`
             + `| Nome social: ${this.cliente.NomeSocial}\n`
@@ -30,8 +29,8 @@ export default class ImpressaorCliente implements Impressor {
         this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
         impressao = impressao + `\n${this.impressor.imprimir()}`
 
-        this.impressor = new ImpressorDependentes(this.cliente.Dependentes)
-        impressao = impressao + `\n${this.impressor.imprimir()}`
+        //this.impressor = new ImpressorDependentes(this.cliente.Dependentes)
+        //impressao = impressao + `\n${this.impressor.imprimir()}`
 
         if(this.cliente.Titular != undefined){
             impressao = impressao + `----------------- Titular -------------\n` 

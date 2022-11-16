@@ -7,8 +7,10 @@ import CadastroEnderecoTitular from "./cadastroEnderecoTitular";
 export default class EditarNomeCliente extends Processo {
     clientes!: Cliente[];
     clienteIndex: number;
-    constructor(clienteIndex: number){
+    clienteTitularIndex?:number
+    constructor(clienteIndex: number, clienteTitularIndex?:number){
         super()
+        this.clienteTitularIndex = clienteTitularIndex
         this.clientes = Armazem.InstanciaUnica.Clientes
         this.clienteIndex = clienteIndex
     }
@@ -16,6 +18,11 @@ export default class EditarNomeCliente extends Processo {
     processar(): void {
         console.log('Edição do nome do cliente...')
         let nome = this.entrada.receberTexto('Insira o nome: ')
-        this.clientes[this.clienteIndex].Nome = nome 
+        if(this.clienteTitularIndex != undefined){
+            this.clientes[this.clienteTitularIndex].Dependentes[this.clienteIndex].Nome = nome
+        }else{
+            this.clientes[this.clienteIndex].Nome = nome 
+        }
+        
     }
 }

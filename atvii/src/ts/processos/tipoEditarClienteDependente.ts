@@ -12,10 +12,12 @@ import ListagemDependentes from "./listagemDependente";
 import ListagemTitular from "./listagemTitular";
 import ListagemTitulares from "./listagemTitulares";
 
-export default class TipoEditarCliente extends Processo {
+export default class TipoEditarClienteDependente extends Processo {
     clienteIndex: number;
-    constructor(clienteIndex: number){
+    clienteTitular: number;
+    constructor(clienteIndex: number,clienteTitular: number){
         super()
+        this.clienteTitular = clienteTitular
         this.clienteIndex = clienteIndex
         this.menu = new MenuEditarCliente()
     }
@@ -25,35 +27,19 @@ export default class TipoEditarCliente extends Processo {
         while (execucao){
             this.menu.mostrar()
             this.opcao = this.entrada.receberNumero('Qual a opção desejada?')
-            switch (this.opcao) {
+            switch (this.opcao) {     
                 case 1:
-                    this.processo = new EditarNomeCliente(this.clienteIndex)
+                    this.processo = new EditarNomeCliente(this.clienteIndex,this.clienteTitular)
                     this.processo.processar()
                     break;
                 case 2:
-                    this.processo = new EditarNomeSocialCliente(this.clienteIndex)
+                    this.processo = new EditarNomeSocialCliente(this.clienteIndex,this.clienteTitular)
                     this.processo.processar()
                     break;
                 case 3:
-                    this.processo = new EditarDataNascimentoCliente(this.clienteIndex)
+                    this.processo = new EditarDataNascimentoCliente(this.clienteIndex,this.clienteTitular)
                     this.processo.processar()
                     break;
-                case 4:
-                    this.processo = new EditarEnderecoCliente(this.clienteIndex)
-                    this.processo.processar()
-                    break;
-                case 5:
-                    this.processo = new EditarCliente(this.clienteIndex)
-                    this.processo.processar()
-                    break;
-                case 6:
-                    this.processo = new EditarDependenteCliente(this.clienteIndex)
-                    this.processo.processar()
-                    break;
-                case 7:
-                    this.processo = new EditarCliente(this.clienteIndex)
-                    this.processo.processar()
-                    break
                 case 8:
                     execucao = false
                     break
