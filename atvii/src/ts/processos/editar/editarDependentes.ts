@@ -1,12 +1,10 @@
-import Processo from "../abstracoes/processo";
-import Armazem from "../dominio/armazem";
-import ImpressorDependentes from "../impressores/impressorDependentes";
-import Impressor from "../interfaces/impressor";
-import Cliente from "../modelos/cliente";
-import Endereco from "../modelos/endereco";
-import CadastrarDocumentosCliente from "./cadastrarDocumentosCliente";
-import CadastroEnderecoTitular from "./cadastroEnderecoTitular";
-import TipoEditarClienteDependente from "./tipoEditarClienteDependente";
+import Processo from "../../abstracoes/processo";
+import Armazem from "../../dominio/armazem";
+import ImpressorDependentes from "../../impressores/impressorDependentes";
+import Impressor from "../../interfaces/impressor";
+import Cliente from "../../modelos/cliente";
+import TipoEditarClienteDependente from "../tipoEditarClienteDependente";
+
 
 export default class EditarDependenteCliente extends Processo {
     clientes!: Cliente[];

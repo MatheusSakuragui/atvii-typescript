@@ -1,8 +1,9 @@
 import Processo from "../abstracoes/processo";
 import MenuTipoListagemClientes from "../menus/menuTipoListagemClientes";
-import ListagemDependentes from "./listagemDependente";
-import ListagemTitular from "./listagemTitular";
-import ListagemTitulares from "./listagemTitulares";
+import ListagemDependentes from "./listagens/listagemDependente";
+import ListagemTitular from "./listagens/listagemTitular";
+import ListagemTitulares from "./listagens/listagemTitulares";
+
 
 export default class TipoListagemClientes extends Processo {
     constructor(){

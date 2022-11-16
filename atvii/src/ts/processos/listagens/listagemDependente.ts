@@ -1,9 +1,9 @@
-import Processo from "../abstracoes/processo";
-import Armazem from "../dominio/armazem";
-import ImpressaorCliente from "../impressores/impressorCliente";
-import ImpressorDependentes from "../impressores/impressorDependentes";
-import Impressor from "../interfaces/impressor";
-import Cliente from "../modelos/cliente";
+import Processo from "../../abstracoes/processo";
+import Armazem from "../../dominio/armazem";
+import ImpressaorCliente from "../../impressores/impressorCliente";
+import ImpressorDependentes from "../../impressores/impressorDependentes";
+import Impressor from "../../interfaces/impressor";
+import Cliente from "../../modelos/cliente";
 import ListagemTitulares from "./listagemTitulares";
 
 export default class ListagemDependentes extends Processo {

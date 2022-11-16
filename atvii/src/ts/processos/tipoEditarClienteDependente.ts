@@ -1,16 +1,9 @@
 import Processo from "../abstracoes/processo";
 import MenuEditarCliente from "../menus/menuAtualizarCliente";
-import MenuAtualizarCliente from "../menus/menuAtualizarCliente";
-import MenuTipoListagemClientes from "../menus/menuTipoListagemClientes";
-import EditarDataNascimentoCliente from "./editarDataNascimentoCliente";
-import EditarDependenteCliente from "./editarDependentes";
-import EditarEnderecoCliente from "./editarEnderecoCliente";
-import EditarNomeCliente from "./editarNomeCliente";
-import EditarCliente from "./editarNomeCliente";
-import EditarNomeSocialCliente from "./editarNomeSocialCliente";
-import ListagemDependentes from "./listagemDependente";
-import ListagemTitular from "./listagemTitular";
-import ListagemTitulares from "./listagemTitulares";
+import EditarDataNascimentoCliente from "./editar/editarDataNascimentoCliente";
+import EditarNomeCliente from "./editar/editarNomeCliente";
+import EditarNomeSocialCliente from "./editar/editarNomeSocialCliente";
+
 
 export default class TipoEditarClienteDependente extends Processo {
     clienteIndex: number;

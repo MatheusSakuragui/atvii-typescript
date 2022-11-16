@@ -1,16 +1,11 @@
 import Processo from "../abstracoes/processo";
 import MenuEditarCliente from "../menus/menuAtualizarCliente";
-import MenuAtualizarCliente from "../menus/menuAtualizarCliente";
-import MenuTipoListagemClientes from "../menus/menuTipoListagemClientes";
-import EditarDataNascimentoCliente from "./editarDataNascimentoCliente";
-import EditarDependenteCliente from "./editarDependentes";
-import EditarEnderecoCliente from "./editarEnderecoCliente";
-import EditarNomeCliente from "./editarNomeCliente";
-import EditarCliente from "./editarNomeCliente";
-import EditarNomeSocialCliente from "./editarNomeSocialCliente";
-import ListagemDependentes from "./listagemDependente";
-import ListagemTitular from "./listagemTitular";
-import ListagemTitulares from "./listagemTitulares";
+import EditarDataNascimentoCliente from "./editar/editarDataNascimentoCliente";
+import EditarDependenteCliente from "./editar/editarDependentes";
+import EditarEnderecoCliente from "./editar/editarEnderecoCliente";
+import EditarNomeCliente from "./editar/editarNomeCliente";
+import EditarNomeSocialCliente from "./editar/editarNomeSocialCliente";
+
 
 export default class TipoEditarCliente extends Processo {
     clienteIndex: number;
@@ -43,7 +38,7 @@ export default class TipoEditarCliente extends Processo {
                     this.processo.processar()
                     break;
                 case 5:
-                    this.processo = new EditarCliente(this.clienteIndex)
+                    this.processo = new EditarNomeCliente(this.clienteIndex)
                     this.processo.processar()
                     break;
                 case 6:
@@ -51,7 +46,7 @@ export default class TipoEditarCliente extends Processo {
                     this.processo.processar()
                     break;
                 case 7:
-                    this.processo = new EditarCliente(this.clienteIndex)
+                    this.processo = new EditarDependenteCliente(this.clienteIndex)
                     this.processo.processar()
                     break
                 case 8:

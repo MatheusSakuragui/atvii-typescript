@@ -1,10 +1,11 @@
-import Processo from "../abstracoes/processo";
-import Armazem from "../dominio/armazem";
-import Cliente from "../modelos/cliente";
-import Endereco from "../modelos/endereco";
+import Processo from "../../abstracoes/processo";
+import Armazem from "../../dominio/armazem";
+import Cliente from "../../modelos/cliente";
+import Endereco from "../../modelos/endereco";
+import ListagemTitulares from "../listagens/listagemTitulares";
 import CadastrarDocumentosCliente from "./cadastrarDocumentosCliente";
 import CadastroEnderecoTitular from "./cadastroEnderecoTitular";
-import ListagemTitulares from "./listagemTitulares";
+
 
 export default class CadastroClienteDependente extends Processo {
     private titulares!: Cliente[]

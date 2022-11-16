@@ -9,7 +9,7 @@ export default class MenuEditarClienteDependente implements Menu {
         console.log(`| 1 - Nome`)
         console.log(`| 2 - Nome Social`)
         console.log(`| 3 - Data de Nascimento`)
-        console.log(`| 8 - Escolher outro cliente`)
+        console.log(`| 4 - Escolher outro cliente`)
         console.log(`| 0 - Sair`)
         console.log(`----------------------`)
     }
