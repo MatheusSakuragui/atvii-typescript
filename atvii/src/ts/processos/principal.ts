@@ -3,6 +3,7 @@ import MenuPrincipal from "../menus/menuPricipal"
 import GerarScript from "../script/script"
 import ListagemTitulares from "./listagens/listagemTitulares"
 import TipoCadastroCliente from "./tipoCadastroCliente"
+import TipoDeletarCliente from "./tipoDeletarCliente"
 import TipoEditarCliente from "./tipoEditarCliente"
 import TipoListagemClientes from "./tipoListagemClientes"
 
@@ -31,6 +32,10 @@ export default class Principal extends Processo {
                 break
             case 3:
                 this.processo = new TipoListagemClientes()
+                this.processo.processar()
+                break
+            case 4:
+                this.processo = new TipoDeletarCliente()
                 this.processo.processar()
                 break
             case 0:
